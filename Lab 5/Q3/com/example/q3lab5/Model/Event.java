@@ -17,9 +17,9 @@ public class Event {
     private String description;
     private int capacity;
 
-    @JsonSerialize(using = LocalDateTimeSerializer.class)
-    @JsonProperty("date")
-    @JsonFormat(pattern = "dd/MM/yyyy hh:mm:ss a")
+
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate startDate;
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate endDate;
 }
